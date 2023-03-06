@@ -2,57 +2,32 @@ import logo from "./logo.svg";
 import "./App.css";
 import ExpenseItem from "./components/ExpenseItem";
 
+
 function App() {
+
   const expenses = [
-    {
-      id: "e1",
-      title: "toilet paper",
-      amount: 94.2,
-      date: new Date(2022, 7, 14),
-    },
-    {
-      id: "e2",
-      title: "car insurance",
-      amount: 450.2,
-      date: new Date(2022, 7, 14),
-    },
-    {
-      id: "e3",
-      title: "new phone",
-      amount: 700.25,
-      date: new Date(2022, 7, 14),
-    },
-    {
-      id: "e4",
-      title: "new desk",
-      amount: 120.5,
-      date: new Date(2022, 7, 14),
-    },
+    {id:1,title:"Car Insurance",amount:245.56,date:new Date(2023,2,2)},
+    {id:2,title:"Toilet Paper",amount:10.2,date:new Date(2023,1,2)},
+    {id:3,title:"New Phone",amount:199.99,date:new Date(2023,2,23)},
+    {id:4,title:"New Desk (Wodden)",amount:67.00,date:new Date(2023,6,1)},
+    {id:4,title:"New Pencil",amount:3.00,date:new Date(2023,6,1)},
+  
   ];
+
+  let expense = expenses[parseInt(Math.random()*5)];
+  
+
 
   return (
     <div>
       <h1>Expenses</h1>
       <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
       />
-      <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      />
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-      />
-      <ExpenseItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date}
-      />
+
+    
     </div>
   );
 }

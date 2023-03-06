@@ -1,6 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
+
+
 
 
 function App() {
@@ -14,20 +15,10 @@ function App() {
   
   ];
 
-  let expense = expenses[parseInt(Math.random()*5)];
-  
-
 
   return (
     <div>
-      <h1>Expenses</h1>
-      <ExpenseItem
-        title={expense.title}
-        amount={expense.amount}
-        date={expense.date}
-      />
-
-    
+      <Expenses items={expenses} />
     </div>
   );
 }

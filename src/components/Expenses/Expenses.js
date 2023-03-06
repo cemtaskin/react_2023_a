@@ -1,7 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
-function Expenses({ items }) {
+const Expenses =  ({ items }) =>  {
   return (
     <div>
       <h1>Expenses</h1>

@@ -4,7 +4,7 @@ import Expenses from "./components/Expenses/Expenses";
 
 
 
-function App() {
+const  App = () => {
 
   const expenses = [
     {id:1,title:"Car Insurance",amount:245.56,date:new Date(2023,2,2)},
